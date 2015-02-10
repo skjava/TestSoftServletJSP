@@ -8,6 +8,13 @@ PRIMARY KEY (user_id)
 );
 
 CREATE TABLE account (
+  account Integer (30) NOT NULL,
+  balans Integer (200) NOT NULL,
+  userId INTEGER,
+  PRIMARY KEY (userId)
+);
+
+CREATE TABLE account (
   id INTEGER NOT NULL AUTO_INCREMENT,
   account Integer (30) NOT NULL,
   balans Integer (200) NOT NULL,
@@ -15,7 +22,7 @@ CREATE TABLE account (
   FOREIGN KEY (userId) REFERENCES user(id)
 );
 
-INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `face`, `city`) VALUES  
+INSERT INTO `user` (`first_name`, `last_name`, `face`, `city`) VALUES  
  ('Piter', 'Troll5', 'legal entity', 'Kiev'),  
  ('Mikhail', 'Troll4', 'private person', 'Kharkiv'),  
  ('Sveta', 'Troll3', 'private person', 'Lviv'),  
